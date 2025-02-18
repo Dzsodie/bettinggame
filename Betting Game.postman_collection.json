@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "03c8583c-ac9a-4144-ba54-21372a98d72e",
+		"name": "Betting Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12055785"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register?name=John&surname=Doe&username=johndoe&password=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "John"
+						},
+						{
+							"key": "surname",
+							"value": "Doe"
+						},
+						{
+							"key": "username",
+							"value": "johndoe"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Bet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiaWF0IjoxNzM5OTA1NTg5LCJleHAiOjE3Mzk5OTE3MDksInJvbGVzIjpbIlJPTEVfUExBWUVSIl19.IAq799tVmPyD0j5MgtbG8Jky4P0dnpnhtsdP2WhUq0U"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bet?username=johndoe&betAmount=50.0&chosenNumber=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bet"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "johndoe"
+						},
+						{
+							"key": "betAmount",
+							"value": "50.0"
+						},
+						{
+							"key": "chosenNumber",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player Wallet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8080/api/wallet/johndoe"
+			},
+			"response": []
+		},
+		{
+			"name": "Leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/leaderboard"
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/transactions/johndoe"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John\",\n  \"surname\": \"Doe\",\n  \"username\": \"johndoe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login?name =John&surname=Doe&username=johndoe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name ",
+							"value": "John"
+						},
+						{
+							"key": "surname",
+							"value": "Doe"
+						},
+						{
+							"key": "username",
+							"value": "johndoe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

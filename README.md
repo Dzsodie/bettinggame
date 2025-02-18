@@ -1,14 +1,14 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Kotlin 1.9.25](https://img.shields.io/badge/Kotlin-1.9.25-7F52FF?style=for-the-badge&logo=kotlin)
-![Java 17](https://img.shields.io/badge/Java-17-007396?style=for-the-badge&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2%2B-6DB33F?style=for-the-badge&logo=springboot)
-![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Repository-6DB33F?style=for-the-badge&logo=spring)
-![H2 Database](https://img.shields.io/badge/H2%20Database-Persistence-003366?style=for-the-badge&logo=h2)
+![License: MIT](https://img.shields.io/badge/License-MIT-9ED7E6?style=for-the-badge&logo=license)
+![Kotlin 1.9.25](https://img.shields.io/badge/Kotlin-1.9.25-AFDAEO?style=for-the-badge&logo=kotlin)
+![Java 17](https://img.shields.io/badge/Java-17-8DBBCC?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2%2B-A9C7EE?style=for-the-badge&logo=springboot)
+![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Repository-93b9e1?style=for-the-badge&logo=spring)
+![H2 Database](https://img.shields.io/badge/H2%20Database-Persistence-7AA2C4?style=for-the-badge&logo=h2)
 ![Spring Boot Validation](https://img.shields.io/badge/Spring%20Boot-Validation-6DB33F?style=for-the-badge&logo=spring)
 ![Spring Boot Security](https://img.shields.io/badge/Spring%20Boot-Security-6DB33F?style=for-the-badge&logo=spring)
-![JSON Web Token](https://img.shields.io/badge/JWT-Tokenization-000000?style=for-the-badge&logo=json)
+![JSON Web Token](https://img.shields.io/badge/JWT-Tokenization-006884?style=for-the-badge&logo=json)
 ![Gradle](https://img.shields.io/badge/Gradle-Build%20Tool-02303A?style=for-the-badge&logo=gradle)
-![Swagger](https://img.shields.io/badge/Swagger-API%20Documentation-85EA2D?style=for-the-badge&logo=swagger)
+![Swagger](https://img.shields.io/badge/Swagger-API%20Documentation-587880?style=for-the-badge&logo=swagger)
 ![MockK](https://img.shields.io/badge/MockK-Testing-FF4081?style=for-the-badge&logo=mockk)
 ![JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5)
 ![Logging](https://img.shields.io/badge/Logging-SLF4J-blue?style=for-the-badge&logo=java)
@@ -41,7 +41,7 @@ This project is a demo for the RiverTech interview process, it's main purpose is
 - Player's wallet contains actual status.
 - Player can see the leaderboard.
 ## Project structure
-    ```shell
+    ```
     bettinggame/
     ├── src/main/kotlin/com/rivertech/bettinggame/
     │   ├── config/
@@ -65,7 +65,7 @@ This project is a demo for the RiverTech interview process, it's main purpose is
     git clone  https://github.com/Dzsodie/bettinggame.git
     ```
 ## Starting the application
-1. Build the application
+1. Build the application from the directory you cloned it to.
    ```shell
    ./gradlew clean build
    ```
@@ -74,10 +74,11 @@ This project is a demo for the RiverTech interview process, it's main purpose is
    ./gradlew bootRun
    ```
 ## Testing with Postman
-1. Find the postman collection 'bettinggame.postman-collection.json' which is in the root directory.
+1. Find the postman collection 'Betting Game.postman_collection.json' which is in the root directory of the cloned application.
 2. Import the collection to your Postman client.
-3. Start the application.
-4. Use the Register endpoint first.
+3. Make sure that you add your generated and valid JWT token to the Authorization tab with Bearer option for the requests that require the user to be authenticated.
+4. Start the application.
+5. Use the Register endpoint first, no authorization needed.
 - Response should look like the following.
    ```shell
    {
@@ -96,7 +97,7 @@ This project is a demo for the RiverTech interview process, it's main purpose is
     ]
     }
    ```
-5. Now send the request to the Login endpoint.
+6. Now send the request to the Login endpoint, no authorization needed.
 - Response should look like the following.
     ```shell
     {
@@ -117,7 +118,7 @@ This project is a demo for the RiverTech interview process, it's main purpose is
         }
     }
     ```
-6. You can send request to the Place Bet, the Player Wallet, the Leaderboard, or the Transaction History endpoints now.
+7. You can send request to the Place Bet, the Player Wallet, the Leaderboard, or the Transaction History endpoints now. Don't forget to add authorization for these.
 - Place Bet response.
    ```shell
    {
