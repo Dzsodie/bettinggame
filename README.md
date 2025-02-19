@@ -1,5 +1,5 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-9ED7E6?style=for-the-badge&logo=license)
-![Kotlin 1.9.25](https://img.shields.io/badge/Kotlin-1.9.25-AFDAEO?style=for-the-badge&logo=kotlin)
+![Kotlin 1.9.25](https://img.shields.io/badge/Kotlin-1.9.25-480082?style=for-the-badge&logo=kotlin)
 ![Java 17](https://img.shields.io/badge/Java-17-8DBBCC?style=for-the-badge&logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2%2B-A9C7EE?style=for-the-badge&logo=springboot)
 ![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Repository-93b9e1?style=for-the-badge&logo=spring)
@@ -9,10 +9,10 @@
 ![JSON Web Token](https://img.shields.io/badge/JWT-Tokenization-006884?style=for-the-badge&logo=json)
 ![Gradle](https://img.shields.io/badge/Gradle-Build%20Tool-02303A?style=for-the-badge&logo=gradle)
 ![Swagger](https://img.shields.io/badge/Swagger-API%20Documentation-587880?style=for-the-badge&logo=swagger)
-![MockK](https://img.shields.io/badge/MockK-Testing-FF4081?style=for-the-badge&logo=mockk)
+![MockK](https://img.shields.io/badge/MockK-Testing-4A6378?style=for-the-badge&logo=mockk)
 ![JUnit](https://img.shields.io/badge/JUnit-5-25A162?style=for-the-badge&logo=junit5)
 ![Logging](https://img.shields.io/badge/Logging-SLF4J-blue?style=for-the-badge&logo=java)
-![Jacoco](https://img.shields.io/badge/Jacoco-Test%20Coverage-EC2025?style=for-the-badge&logo=jacoco)
+![Jacoco](https://img.shields.io/badge/Jacoco-Test%20Coverage-4A6378?style=for-the-badge&logo=jacoco)
 
 
 ## Recording Service
