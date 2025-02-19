@@ -34,6 +34,14 @@ class GameServiceImpl(
 
     override suspend fun registerPlayer(name: String, surname: String, username: String, password: String): Player = withContext(Dispatchers.IO) {
         try {
+            logger.info("Checking if username exists: $username")
+
+            // Check if username already exists
+            if (playerRepository.existsByUsername(username)) {
+                logger.warn("Username already taken: $username")
+                throw IllegalArgumentException("Username '$username' is already in use. Please choose another one.")
+            }
+
             val player = Player(name = name, surname = surname, username = username, password = password)
             val wallet = Wallet(balance = 1000.0, player = player)
             player.wallet = wallet
@@ -47,6 +55,7 @@ class GameServiceImpl(
             throw e
         }
     }
+
 
     override suspend fun placeBet(username: String, betAmount: Double, chosenNumber: Int): Bet = withContext(Dispatchers.IO) {
         try {

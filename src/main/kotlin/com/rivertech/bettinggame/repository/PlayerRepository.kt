@@ -7,4 +7,5 @@ import com.rivertech.bettinggame.model.Player
 @Repository
 interface PlayerRepository : JpaRepository<Player, Long> {
     fun findByUsername(username: String): Player?
+    fun existsByUsername(username: String): Boolean
 }

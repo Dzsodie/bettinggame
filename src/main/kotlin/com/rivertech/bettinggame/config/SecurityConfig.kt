@@ -63,11 +63,15 @@ class SecurityConfig(
             http
                 .csrf { it.disable() }
                 .authorizeHttpRequests { auth ->
-                    auth.requestMatchers("/auth/register", "/auth/login").permitAll()
+                    auth.requestMatchers(
+                        "/auth/register", "/auth/login",
+                        "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**"
+                    ).permitAll()
                         .requestMatchers("/api/bet").hasAuthority("ROLE_PLAYER")
                         .requestMatchers("/api/wallet/**").hasAuthority("ROLE_PLAYER")
                         .requestMatchers("/api/leaderboard").hasAnyRole("PLAYER", "ADMIN")
                         .requestMatchers("/api/transactions/**").hasAuthority("ROLE_PLAYER")
+                        .anyRequest().permitAll()
                 }
                 .addFilterBefore(JwtAuthenticationFilter(jwtTokenProvider, userDetailsService), UsernamePasswordAuthenticationFilter::class.java)
                 .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
